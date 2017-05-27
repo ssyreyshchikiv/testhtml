@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.wrapper {
+    // background-color: lightgray;
+    width: 960px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    
+}
+
+.box {
+    width: 460px;
+    height: 140px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.org {
+    // background: red;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.fin {
+    // background: green;
+    margin-top: 5px;
+
+}
+
+.gos {
+    // background: blue;
+    margin-left: 5px;
+}
+
+.risk {
+    // background: yellow;
+}
+
+
+.heading-text {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 550;
+}
+
+.heading-org {
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.heading-fin {
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+.heading-gos {
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.heading-risk{
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+.text {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+}
+
+.text-org {
+    margin-left: 80px;
+}
+
+.text-fin {
+    margin-left: 45px;
+}
+
+.text-gos {
+    margin-left: 80px;
+}
+
+.text-risk {
+    margin-left: 45px;
+}
+
+.circle-org {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid lime;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -40px; 
+    bottom: -40px; 
+}
+
+.circle-fin {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid lime;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    position: absolute; 
+    bottom: -40px;
+    left: -40px; 
+}
+
+.circle-gos {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid lime;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    position: absolute; 
+    top: -40px;
+    right: -40px; 
+}
+
+.circle-risk {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 40px solid lime;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute; 
+    top: -40px;
+    left: -40px; 
+}
+
+.container {
+    width: 100%;
+}
+
+.progressbar {
+    counter-reset:  step;
+}
+
+.progressbar li {
+    font-size: 12px;
+    list-style-type: none;
+    float: left;
+    width: 16.5%;
+    position: relative;
+    text-align: center;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 3px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child::after {
+    content: none;
+}
+
+.progressbar li.active {
+    color: green;
+}
+
+.progressbar li.active:before {
+    border-color: green;
+}
+
+.progressbar li.active + li:after {
+    background-color: green;
+}
