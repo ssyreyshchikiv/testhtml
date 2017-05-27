@@ -9,44 +9,62 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="box org">
+            <div class="box org li1">
                 <h2 class="heading-text heading-org">ОРГАНИЗАЦИОННО-ПРАВОВЫЕ РИСКИ</h2>
                 <span class="text text-org">Статус компании, массовые адреса, руководители и<br>
                       учредители, время существования организации</span>
-                <div class="circle-org"></div>
+                <div class="circle circle-org"></div>
             </div>
-            <div class="box fin">
+            <div class="box fin li2">
                 <h2 class="heading-text heading-fin">ФИНАНСЫ</h2>
                 <span class="text text-fin">Непокрытые убытки, основные средства, выручка, убыток,<br>
                       уставный капитал, кредиторская и дебиторская<br>
                       задолженности  
                 </span>
-                <div class="circle-fin"></div>
+                <div class="circle circle-fin"></div>
             </div>
-            <div class="box gos">
+            <div class="box gos li3">
                 <h2 class="heading-text heading-gos">ГОСКОНТРАКТЫ</h2>
                 <span class="text text-gos">
                     Выигранные, отмененные и исполненные госконтракты
                 </span>
-                <div class="circle-gos"></div>
+                <div class="circle circle-gos"></div>
             </div>
-            <div class="box risk">
+            <div class="box risk li4">
                 <h2 class="heading-text heading-risk">ДЕЛОВЫЕ РИСКИ</h2>
                 <span class="text text-risk">Сообщения о банкротстве, арбитражные дела, реестр<br>
                       недобросовестных поставщиков
                 </span>
-                <div class="circle-risk"></div>
+                <div class="circle circle-risk"></div>
             </div>
         </div>
         <div class="container">
             <ul class="progressbar">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li class="progresel" id="li1"></li>
+                <li class="progresel" id="li2"></li>
+                <li class="progresel" id="li3"></li>
+                <li class="progresel" id="li4"></li>
+                <li class="progresel" id="li5"></li>
             </ul>    
         </div>
+
+        <div id="modal" class="modal hide" >
+        	<div class="containerMod">
+        		<h4>Выберите действие</h4>
+        		<input type="hidden" name="modHide" value="">
+        		<ul id="variants">
+        			<li varius="1">Успешно продолжить</li>
+        			<li varius="2">Предупреждение</li>
+        			<li varius="3">Остановка сценария</li>
+        		</ul>
+        	</div>
+        </div>
+
+        <script
+		  src="https://code.jquery.com/jquery-1.12.4.min.js"
+		  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		  crossorigin="anonymous"></script>
+
+		  <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
